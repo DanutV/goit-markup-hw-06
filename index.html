@@ -105,24 +105,30 @@
 
           <div class="form-group">
             <label for="comment">Comment</label>
-            <input
-              type="text"
+            <textarea
+              class="input-comment"
+              name="textarea"
               placeholder="Text input"
               id="comment"
-              class="input-comment"
-            />
+            >
+            </textarea>
           </div>
 
-          <div class="check-box">
-            <input
-              type="checkbox"
-              name="checkbox"
-              id="checkbox"
-              class="check-box-pointer"
-            />
-            <label for="terms" class="text-terms">
-              I accept the terms and conditions of the
-              <span class="privacy-text">Privacy Policy</span>
+          <div>
+            <label class="agree-check">
+              <input
+                type="checkbox"
+                class="checkmark"
+                name="agreement"
+                value="agree"
+              />
+              <svg class="icon">
+                <use href="./images/icons/icons.svg#icon-checkbox"></use>
+              </svg>
+              <span class="service-text"
+                >I accept the terms and conditions of the
+                <span class="privacy-text">Privacy Policy</span></span
+              >
             </label>
           </div>
 
@@ -623,6 +629,27 @@
             </li>
           </ul>
         </div>
+        <form>
+          <p class="title-subscribe">Subscribe</p>
+          <div class="footer-subscribe">
+            <div>
+              <label for="email"></label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="E-mail"
+                class="input-subscribe"
+              />
+            </div>
+            <div class="button-subscribe">
+              <input type="submit" value="Subscribe" class="btn-subscribe" />
+              <svg class="icon-subscribe">
+                <use href="./images/icons/icons.svg#icon-subscribe"></use>
+              </svg>
+            </div>
+          </div>
+        </form>
       </div>
     </footer>
     <script src="./js/modal.js"></script>

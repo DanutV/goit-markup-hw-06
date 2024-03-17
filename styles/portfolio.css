@@ -328,3 +328,65 @@ svg {
     background: var(--blue-color);
     border-radius: 50%;
 }
+
+/* Information About Section Subscribe */
+.title-subscribe {
+    color: var(--color-white);
+    margin-bottom: 16px;
+}
+
+.footer-subscribe {
+    display: flex;
+
+}
+
+.input-subscribe {
+    border: 1px solid var(--color-white);
+    border-radius: 4px;
+    width: 264px;
+    height: 40px;
+    background-color: var(--navy-blue);
+    color: var(--color-white);
+    margin-right: 24px;
+}
+
+.input-subscribe::placeholder {
+    color: var(--color-white);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    padding-left: 16px;
+}
+
+.btn-subscribe {
+    display: flex;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: var(--color-white);
+    border: none;
+    border-radius: 4px;
+    padding: 8px 24px;
+    width: 165px;
+    height: 40px;
+    background-color: var(--blue-color);
+    cursor: pointer;
+    s position: absolute;
+}
+
+.icon-subscribe {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    fill: var(--color-white);
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.button-subscribe {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}

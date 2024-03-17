@@ -249,7 +249,7 @@ label {
     line-height: 1.5;
     letter-spacing: 0.02em;
     text-align: center;
-    color: #2e2f42;
+    color: var(--navy-blue);
     padding: 50px 14px 10px 14px;
 }
 
@@ -262,15 +262,22 @@ label {
     gap: 3px;
 }
 
+.form-group:focus-within svg {
+    fill: var(--blue-color);
+}
 
 .input-for-icon {
     padding: 8px 16px;
-    border: 1px solid #2e2f4266;
+    border: 1px solid var(--navy-blue-modal);
     border-radius: 4px;
 }
 
 .input-for-icon:focus {
-    border: 5px solid #ff0606;
+    outline: 1px solid var(--blue-color);
+    border: none;
+}
+.input-icon:focus {
+    color: var(--blue-color);
 }
 
 .input-icon {
@@ -283,49 +290,79 @@ label {
     pointer-events: none;
 }
 
-.input-icon:focus {
-    color: var(--blue-color);
-}
-
 .input-comment {
-    border: 1px solid #2e2f4266;
+    border: 1px solid var(--navy-blue-modal);
     border-radius: 4px;
     width: 360px;
     height: 120px;
 }
 
 .input-comment:focus {
-    border: 5px solid #ff0606;
+    outline: 1px solid var(--blue-color);
+    border: none;
 }
+
 .input-comment::placeholder {
-    vertical-align: top;
+    text-align: initial;
 }
 
+/* Information about checkbox */
+.agree-check {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
 
-.text-terms {
-    font-family: var(--font-family);
+.agree-check .checkmark {
+    display: none;
+}
+
+.agree-check {
+    margin-top: 16px;
+}
+
+.agree-check .icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 7px;
+    fill: none;
+    border: 2px solid #212121;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.agree-check .checkmark:focus + .icon,
+.agree-check .checkmark:checked:focus + .icon {
+    outline: none;
+}
+
+.agree-check .checkmark:checked + .icon {
+    background-color: var(--blue-color);
+    border-color: var(--blue-color);
+    fill: var(--color-white);
+    outline: none;
+    stroke: var(--color-white);
+    stroke-width: 0.2;
+}
+
+.service-text {
     font-weight: 400;
     font-size: 12px;
     line-height: 1.16667;
     letter-spacing: 0.04em;
     color: #8e8f99;
+    
 }
-
-.check-box {
-    margin-top: 13px;
-}
-
-.check-box-pointer {
-    cursor: pointer;
-}
-
 .privacy-text {
     line-height: 1.33333;
     text-decoration: underline;
     text-decoration-skip-ink: none;
-    color: #4d5ae5;
+    color: var(--blue-color);
+    cursor: pointer;
 }
 
+/* Information about button */
 .btn-send-form {
     display: flex;
     justify-content: center;
@@ -345,6 +382,7 @@ label {
     transform: var(--transition);
     transform: scale(1.05);
     cursor: pointer;
+    transition: var(--transition);
 }
 
 /* Information about Hero Section background */
@@ -606,4 +644,66 @@ label {
 .footer-icon:focus {
     background: var(--blue-color);
     border-radius: 50%;
+}
+
+/* Information About Section Subscribe */
+.title-subscribe {
+    color: var(--color-white);
+    margin-bottom: 16px;
+}
+
+.footer-subscribe {
+    display: flex;
+    
+}
+
+.input-subscribe {
+    border: 1px solid var(--color-white);
+    border-radius: 4px;
+    width: 264px;
+    height: 40px;
+    background-color: var(--navy-blue);
+    color: var(--color-white);
+    margin-right: 24px;
+}
+
+.input-subscribe::placeholder {
+    color: var(--color-white);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    padding-left: 16px;
+}
+
+.btn-subscribe {
+    display: flex;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: var(--color-white);
+    border: none;
+    border-radius: 4px;
+    padding: 8px 24px;
+    width: 165px;
+    height: 40px;
+    background-color: var(--blue-color);
+    cursor: pointer;s
+    position: absolute;
+}
+
+.icon-subscribe {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    fill: var(--color-white);
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.button-subscribe {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
 }
